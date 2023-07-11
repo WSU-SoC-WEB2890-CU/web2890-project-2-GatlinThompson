@@ -1,0 +1,154 @@
+@use "./custom.scss" as *;
+
+.header {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: $darker-gray;
+  @include media-breakpoint-up(md) {
+    font-size: 3.5rem;
+  }
+
+  &-line {
+    height: 1px;
+    background-color: $black;
+  }
+}
+
+.featured {
+  &-title {
+    display: flex;
+    align-items: center;
+    & > h3 {
+      color: $dark-blue;
+      font-weight: bolder;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      font-family: "Kumbh Sans", sans-serif;
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+        margin-top: 3rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 3.5rem;
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  &-circle {
+    background-color: $red;
+    height: 140px;
+    width: 140px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+      height: 199px;
+      width: 199px;
+    }
+    @include media-breakpoint-up(xl) {
+      height: 300px;
+      width: 300px;
+    }
+
+    & > div {
+      width: 95%;
+      height: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+
+      & > p {
+        color: $white;
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+
+        &:nth-child(1) {
+          font-size: 2.1rem;
+          font-weight: bold;
+          margin: 0;
+          margin-bottom: -0.5rem;
+          @include media-breakpoint-up(md) {
+            font-size: 3rem;
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: 5rem;
+          }
+        }
+
+        &:nth-child(2) {
+          font-size: 0.9rem;
+          font-weight: 500;
+
+          @include media-breakpoint-up(md) {
+            font-size: 1.25rem;
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+  &-list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+    }
+  }
+
+  &-item {
+    display: flex;
+
+    & > i {
+      font-size: 1.5rem;
+      align-self: center;
+      color: $primary;
+      @include media-breakpoint-up(md) {
+        font-size: 1.75rem;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 3rem;
+      }
+    }
+    & > p {
+      margin-left: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 0;
+      color: $dark-gray;
+      align-self: center;
+      @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 1.9rem;
+      }
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.buttons-featured {
+  display: flex;
+  justify-content: space-between;
+}

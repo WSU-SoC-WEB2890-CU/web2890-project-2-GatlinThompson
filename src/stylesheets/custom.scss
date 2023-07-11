@@ -1,0 +1,33 @@
+$dark-blue: #274561;
+$light-blue: #3e7ebb;
+$lime-green: #6bdc4b;
+$dark-green: #497e55;
+$light-gray: #eaeaea;
+$dark-gray: #737373;
+$darker-gray: #4a4a4a;
+$light-orange: #ff8a00;
+$red: #d34e4e;
+
+$navbar-toggler-focus-width: 0;
+
+$primary: $lime-green;
+$secondary: $dark-blue;
+$info: $light-blue;
+$warning: $light-orange;
+@import "bootstrap/scss/bootstrap.scss";
+//@import "bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;700&display=swap");
+
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: inherit;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
