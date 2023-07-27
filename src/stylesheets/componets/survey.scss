@@ -1,0 +1,84 @@
+@use "../custom.scss" as *;
+
+.question {
+  &-header {
+    & > h3 {
+      color: $dark-blue;
+      font-family: "Kumbh Sans", sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.9rem;
+      }
+    }
+
+    & > div {
+      width: 100%;
+      height: 3px;
+      background-color: $light-orange;
+      box-shadow: 0px 6px 5px -1px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &-item {
+    display: flex;
+    margin-top: 1.2rem;
+    align-items: center;
+
+    & > p {
+      color: $dark-gray;
+      font-size: 1.1rem;
+      margin-left: 0.5rem;
+      align-items: center;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.radio-btn {
+  user-select: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid $lime-green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  @include media-breakpoint-up(lg) {
+    width: 40px;
+    height: 40px;
+  }
+
+  .checkmark {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: $lime-green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+    }
+  }
+
+  & input:checked + .checkmark {
+    color: $white;
+    background-color: $lime-green;
+  }
+  & > input {
+    display: none;
+  }
+}
