@@ -35,6 +35,9 @@ footer {
     align-items: flex-end;
   }
 }
+main {
+  z-index: 100;
+}
 
 .footer {
   background-color: $dark-blue;
@@ -43,6 +46,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  & > div {
+  }
 
   & > p {
     color: #e5e2e2;
